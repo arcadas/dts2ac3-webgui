@@ -1,0 +1,8 @@
+.idea
+.history
+cache/*
+!cache/.gitkeep
+config.php
+convert.log
+mkvdts2ac3.sh
+test.mkv
