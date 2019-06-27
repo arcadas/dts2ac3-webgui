@@ -1,5 +1,7 @@
 <?php
 
+namespace Services;
+
 class D2AConvert
 {
     public function action($sFile)

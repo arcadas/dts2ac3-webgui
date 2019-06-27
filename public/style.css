@@ -1,0 +1,26 @@
+body {
+    /*background-color: #555555;*/
+    color: #444;
+    font-family: "Source Sans Pro", sans-serif;
+}
+
+h1 {
+    font-size: 32px;
+    padding-left: 14px;
+    padding-top: 10px;
+}
+
+tbody, tfoot, thead {
+    border: none;
+}
+tbody tr:nth-child(odd) {
+    background-color: #efefef;
+}
+tbody tr:nth-child(even){
+    background-color: #ffffff;
+}
+
+.list-item {
+    padding-left: 5px;
+    font-size: 15px;
+}

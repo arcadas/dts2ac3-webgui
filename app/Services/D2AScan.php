@@ -1,5 +1,7 @@
 <?php
 
+namespace Services;
+
 class D2AScan
 {
     const DIR = D2A_MEDIA;
@@ -44,7 +46,7 @@ class D2AScan
             if ($sResultDts == '0' && $sResultAc3 == '0')
             {
                 $sColor = 'red';
-                $sMsg = 'ERROR (no audio / unsuccessful scan)';
+                $sMsg = 'Error';
             }
             if ($sResultDts != '0' && $sResultAc3 == '0')
             {

@@ -2,6 +2,14 @@
 
 Requirements: linux/unix, webserver (NginX, Apache), PHP5/7, ffmpeg.
 
+NginX config:
+
+```
+location / {
+            try_files $uri $uri/ /index.php;
+}
+```
+
 Download and copy the following file into the root:
 <https://github.com/JakeWharton/mkvdts2ac3/blob/master/mkvdts2ac3.sh> (Version: 1.6.0)
 

@@ -1,5 +1,7 @@
 <?php
 
+namespace Services;
+
 class D2AView
 {
     public function action(D2ACollection $oD2ACollection)
@@ -9,12 +11,10 @@ class D2AView
         foreach ($oD2ACollection->A as $aItem)
         {
             $sDub = $this->getDubHtml($aItem);
-            $aList[] = $sDub . $aItem['parent'] . '/' . $aItem['file'] . $this->getAdditionalInfo($aItem);
+            $aList[] = '<tr class="list-item"><td>' . $sDub . $aItem['parent'] . '/' . $aItem['file'] . $this->getAdditionalInfo($aItem) . '</td></tr>';
         }
 
-        return $this->getConvertInfo() .
-            $this->getMenu(count($oD2ACollection->A)) .
-            implode('<br>', $aList);
+        return $this->getConvertInfo() . '<table><tbody>' . implode('', $aList) . '</tbody></table>';
     }
 
     private function getDubHtml($aItem)
@@ -62,18 +62,6 @@ class D2AView
                 </span>
                 <br>';
         }
-    }
-
-    private function getMenu($iCount)
-    {
-        return '
-            <h4>MOVIES (' . $iCount . ')</h4>
-            [ <a href="/?action=list">LIST</a> ] |
-            [ <a href="/?action=list_convertables">LIST CONVERTABLES</a> ] |
-            [ <a href="/?action=scan_all">SCAN ALL</a> ]
-            <br>
-            <br>
-        ';
     }
 
 }

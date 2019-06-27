@@ -1,5 +1,7 @@
 <?php
 
+namespace Services;
+
 class D2AList
 {
     const DIR = D2A_MEDIA;
