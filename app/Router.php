@@ -47,7 +47,7 @@ class Router
 
     private function handlerDefault()
     {
-        return '';
+        return 'Page not found';
     }
 
 }

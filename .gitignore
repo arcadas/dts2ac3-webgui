@@ -3,6 +3,6 @@
 cache/*
 !cache/.gitkeep
 config.php
-convert.log
+log/*
 mkvdts2ac3.sh
 test.mkv

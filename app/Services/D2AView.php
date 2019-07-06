@@ -24,7 +24,7 @@ class D2AView
         if ($aItem['dub'][3] != '0') {
             $sHtml = '
                 <span style="color: orange;">
-                    [ <a href="/?action=convert&file=' . $sPath .'">CONVERT</a> ]
+                    [ <a href="/convert?file=' . $sPath .'">CONVERT</a> ]
                 </span> ';
         } elseif ($aItem['dub'][2] != '0') {
             $sHtml = '
@@ -34,7 +34,7 @@ class D2AView
         } else {
             $sHtml = '
                 <span style="color: grey;">
-                    [ <a href="/?action=scan&file=' . $sPath .'">SCAN</a> ]
+                    [ <a href="/scan?file=' . $sPath .'">SCAN</a> ]
                 </span> ';
         }
 
@@ -50,10 +50,10 @@ class D2AView
 
     private function getConvertInfo()
     {
-        $sFileInP = './convert.inp';
-        $sInfo = substr(array_pop(file('./convert.log')), -60);
+        $sFileInP = './log/convert.inp';
         if (file_exists($sFileInP))
         {
+            $sInfo = substr(array_pop(file('./log/convert.log')), -60);
             echo '
                 <span style="color: orange">
                     <b>Convert in progress... </b>
