@@ -19,8 +19,7 @@ chmod a+x dts2ac3.sh
 chmod a+x mkvdts2ac3.sh
 ```
 
-Further reading: \
-[Running Docker Containers as Current Host User](https://jtreminio.com/blog/running-docker-containers-as-current-host-user/)
+Run in docker: [arcadas/arcadas-server#media](https://github.com/arcadas/arcadas-server#media)
 
 Download and copy the following file into the root:
 <https://github.com/JakeWharton/mkvdts2ac3/blob/master/mkvdts2ac3.sh> (Version: 1.6.0)
