@@ -15,7 +15,8 @@ class D2AConvert
             error_log($sFileInPContent, 3, $sFileInP);
             @unlink('./log/convert.log');
             $sCWD = getcwd();
-            exec($sCWD . '/dts2ac3.sh ' . $sFile . ' > /dev/null &', $output);
+	    $sCWD .= '/dts2ac3.sh ' . $sFile . ' > /dev/null &';
+            exec($sCWD, $output);
             $sFileNfo = './cache/' . base64_encode($aFile['basename']) . '.inf';
             if (file_exists($sFileNfo)) unlink($sFileNfo);
         }
